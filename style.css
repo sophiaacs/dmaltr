@@ -1,10 +1,15 @@
 body {
-    background-image: url('kitchen1.jpg');
+    background-image: url('kitchen5.jpg');
     background-size: cover;
 }
 
 /* headings */
 h1 {
+    color: #367C4F;
+    text-align: center;
+}
+
+p {
     color: #367C4F;
     text-align: center;
 }
