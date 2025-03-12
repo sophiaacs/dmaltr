@@ -1,26 +1,20 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DMALTR</title>
+    <title>Kitchen</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <h1>DMALTR</h1>
-    <p>♡ your favorite Korean dishes ♡</p>
-
-    <div class="topnav">
-        <input type="text" placeholder="Enter ingredients">
+    <div class="container">
+        <div class="title-container">
+            <h1 class="title">DMALTR</h1>
+            <p class="subtitle">♡ your favorite Korean dishes ♡</p>
+            <input type="text" class="search-bar" placeholder="Search...">
+        </div>
+        <img src="fridge.png" class="fridge" id="fridge">
     </div>
-
-
-    <div id="fridge-container">
-        <img src="fridge.png" id="fridge" alt="Refrigerator" onclick="openStorage()">
-    </div>
-
     <script src="demo.js"></script>
-
 </body>
 </html>
