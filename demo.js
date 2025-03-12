@@ -1,29 +1,44 @@
-async function getRecipes(ingredient) {
-    const apiKey = "YOUR_API_KEY";  // Replace with your API key
-    const url = `https://api.spoonacular.com/recipes/findByIngredients?ingredients=${ingredient}&apiKey=${apiKey}`;
+// Redirect to storage.html when fridge is clicked
+function openStorage() {
+    window.location.href = "storage.html";
+    console.log("c");
+}
 
-    try {
-        let response = await fetch(url);
-        let data = await response.json();
-        console.log(data); // Display recipes in the console
-        displayRecipes(data); // Call a function to display recipes on your website
-    } catch (error) {
-        console.error("Error fetching data:", error);
+document.addEventListener("DOMContentLoaded", function () {
+    let fridge = document.getElementById("fridge");
+
+  
+    if (fridge) {
+        fridge.addEventListener("click", function () {
+            window.location.href = "storage.html"; // Redirection
+        });
+    } else {
+        console.error("Fridge element not found!");
     }
-}
-
-function displayRecipes(recipes) {
-    let recipeList = document.getElementById("recipe-list");
-    recipeList.innerHTML = ""; // Clear previous results
-
-    recipes.forEach(recipe => {
-        let listItem = document.createElement("li");
-        listItem.textContent = recipe.title;
-        recipeList.appendChild(listItem);
-    });
-}
-
-// Example call when clicking on an ingredient
-document.getElementById("fridge-item").addEventListener("click", () => {
-    getRecipes("chicken"); // Replace with the actual selected ingredient
 });
+
+
+let selectedFoods = [];
+
+function selectFood(food) {
+    if (!selectedFoods.includes(food)) {
+        selectedFoods.push(food);
+    }
+    fetchRecipes();
+}
+
+function fetchRecipes() {
+    const recipes = {
+        kimchi: ["Kimchi Fried Rice", "Kimchi Stew"],
+        egg: ["Korean Rolled Omelette", "Bibimbap"],
+        rice: ["Bibimbap", "Kimchi Fried Rice"],
+        "kimchi,egg": ["Kimchi Egg Stir Fry"],
+        "kimchi,rice": ["Kimchi Fried Rice"],
+        "egg,rice": ["Egg Fried Rice"]
+    };
+
+    let key = selectedFoods.join(",");
+    let results = recipes[key] || ["No matching recipes found."];
+
+    document.getElementById("recipe-results").innerHTML = results.map(r => <p>${r}</p>).join("");
+}

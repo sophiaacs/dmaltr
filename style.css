@@ -1,29 +1,31 @@
+/* 🔹 Kitchen Background */
 body {
-    background-image: url('kitchen.png');
+    text-align: center;
+    font-family: Arial, sans-serif;
+    background-image: url('/kitchen_background.jpg');
     background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh; /* full screen */
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
 }
 
-/* headings */
-h1 {
-    color: #367C4F;
-    text-align: center;
-}
-
-p {
-    color: #367C4F;
-    text-align: center;
-}
-
-/* search bar */
-.topnav {
-    margin: 10px;
-    text-align: center;
-}
-
-/* search bar */
-.topnav input {
-    padding: 10px;
-    width: 200px;
-    border-radius: 5px;
-    border: 1px solid #ddd;
-}
+/* 🔹 Storage Background */
+    body {
+        background-image: url('images/storage_background.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100vh;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
