@@ -1,7 +1,8 @@
 /* 🔹 Kitchen Background */
 body {
     text-align: center;
-    font-family: Arial, sans-serif;
+    font-family: 'Times New Roman', Times, serifs;
+    color: #31622D;
     background-image: url('/kitchen_background.jpg');
     background-size: cover;
     background-position: center;
