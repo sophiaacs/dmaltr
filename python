@@ -1,0 +1,36 @@
+from fastapi import FastAPI
+from pydantic import BaseModel
+from typing import List
+
+app = FastAPI()
+
+# Define the Recipe model (schema)
+class Recipe(BaseModel):
+    id: int
+    name: str
+    ingredients: List[str]
+    instructions: str
+    category: str
+
+# In-memory database (for simplicity)
+recipes_db = [
+    Recipe(id=1, name="김치 (kimchi)", ingredients=["cabbage", "salt", "garlic", "chili powder"], instructions="Mix ingredients and ferment.", category="side dish"),
+    Recipe(id=2, name="비빔밥 (bibimbap)", ingredients=["Rice", "Vegetables", "sunny side up egg", "gochujang"], instructions="Mix all ingredients in a bowl.", category="rice dish"),
+    Recipe(id=3, name="됀장찌개 (fermented soybean paste soup)", ingredients=["potato", "zucchini", "garlic cloves", "dried anchoivies", "green onions"], instructions="", category = "")
+]
+
+@app.get("/recipes", response_model=List[Recipe])
+def get_recipes():
+    return recipes_db
+
+@app.get("/recipes/{recipe_id}", response_model=Recipe)
+def get_recipe(recipe_id: int):
+    for recipe in recipes_db:
+        if recipe.id == recipe_id:
+            return recipe
+    return {"error": "Recipe not found"}
+
+@app.post("/recipes", response_model=Recipe)
+def add_recipe(recipe: Recipe):
+    recipes_db.append(recipe)
+    return recipe
