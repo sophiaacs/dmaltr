@@ -22,39 +22,55 @@ body, html {
 .title-container {
     text-align: center;
     position: absolute;
-    top: 10%;
+    top: -1%;
     left: 50%;
     transform: translateX(-50%);
     color: #31622D;
-    font-family: 'Times New Roman', Times, serifs;
-    color: #31622D;
+    font-family: 'Gaegu', cursive;
 }
 
 .title {
-    font-size: 3rem;
+    font-size: 4rem;
     font-weight: bold;
 }
 
 .subtitle {
     font-size: 1.2rem;
-    margin-top: -10px;
+    margin-top: -40px;
 }
 
 /* Search bar styling */
 .search-bar {
     margin-top: 10px;
     padding: 8px;
-    width: 250px;
+    width: 350px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #31622D;
+    font-family: 'Gaegu', cursive;
+}
+
+/* Search bar styling */
+.search-bar {
+    position: absolute;
+    top: 10%;  /* Moved down */
+    left: 22%; /* Moved to the left */
+    transform: translateX(-50%);
+    margin-top: 10px;
+    padding: 8px;
+    width: 300px;
     border: none;
     border-radius: 5px;
     font-size: 1rem;
 }
 
+
 /* Fridge image styling */
 .fridge {
     position: absolute;
-    top: 54%;  /* up/down */
-    left: 30%;  /* left/right */
+    top: 50%;  /* up/down */
+    left: 31%;  /* left/right */
     transform: translate(-50%, -50%);
     width: 350px; /* Adjust size as needed */
     cursor: pointer;
