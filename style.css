@@ -1,144 +1,64 @@
-/* General body styling */
-body, html {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-}
-
-/* Homepage styling */
-.container {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    background-image: url('kitchen.jpg');
-    background-size: cover;
-    background-position: center;
-}
-
-/* Title and subtitle styling */
-.title-container {
-    text-align: center;
+/* Styling for the buttons */
+.button {
     position: absolute;
-    top: -1%;
-    left: 50%;
-    transform: translateX(-50%);
-    color: #31622D;
-    font-family: 'Gaegu', cursive;
-}
-
-.title {
-    font-size: 4rem;
-    font-weight: bold;
-}
-
-.subtitle {
-    font-size: 1.2rem;
-    margin-top: -40px;
-}
-
-/* Search bar styling */
-.search-bar {
-    position: absolute;
-    top: 10%;  /* Adjust as needed */
-    left: 22%; /* Adjust as needed */
-    transform: translateX(-50%);
-    padding: 8px;
-    width: 300px;
-    border: none;
-    border-radius: 5px;
-    font-size: 1rem;
-    color: #31622D;
-    font-family: 'Gaegu', cursive;
-}
-
-/* Fridge image styling */
-.fridge {
-    position: absolute;
-    top: 50%;  /* up/down */
-    left: 31%;  /* left/right */
-    transform: translate(-50%, -50%);
-    width: 350px; /* Adjust size as needed */
     cursor: pointer;
-}
-
-/* Storage page styling */
-.storage-page {
-    background-image: url('storage.jpg');
+    width: 100px; /* Adjust the button size */
+    height: 100px;
     background-size: cover;
     background-position: center;
 }
 
-.recipe-button {
-    position: absolute;
+#kimchi-button {
     top: 44%;  /* Adjust position */
-    left: 42%;
-    transform: translate(-50%, -50%);
-    width: 70px; /* Adjust size */
-    cursor: pointer;
+    left: 50.5%;
 }
 
+#bibimbap-button {
+    top: 50%;  /* Adjust the position */
+    left: 40%;
+}
+
+#bbq-button {
+    top: 70%;  /* Adjust the position */
+    left: 60%;
+}
+
+/* Recipe container styling */
 #recipe-container {
-    margin-top: 20px;
-    padding: 10px;
-    font-family: Arial, sans-serif;
-}
-
-.recipe {
-    border: 1px solid #ccc;
-    padding: 10px;
-    margin: 10px 0;
-    background-color: #f9f9f9;
-    border-radius: 5px;
-}
-
-/* Styling for the recipe container */
-#recipe-container {
-    width: 80%; /* Width of the container (you can adjust this) */
-    max-width: 800px; /* Maximum width */
-    max-height: 70vh; /* Maximum height (70% of the viewport height) */
-    overflow-y: auto; /* Allow scrolling if the content exceeds the container height */
-    margin: 20px auto; /* Center the container horizontally and add margin */
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    right: 10%;
+    bottom: 10%;
+    background-color: rgba(255, 255, 255, 0.9);
+    overflow-y: scroll;
     padding: 20px;
-    background-color: rgba(255, 255, 255, 0.8); /* Optional: background color for better contrast */
-    border-radius: 10px; /* Optional: rounded corners */
+    border-radius: 10px;
+    display: none; /* Hidden by default */
 }
 
-/* Styling for individual recipe items */
-.recipe {
-    margin-bottom: 20px;
-    padding: 10px;
-    border-bottom: 1px solid #ccc; /* Add a line to separate each recipe */
-}
-
-.recipe img {
-    width: 100%; /* Ensure images fit within the container */
-    max-width: 200px; /* Max size of images */
-    height: auto;
-}
-
-/* Styling for the exit button */
 .exit-button {
     position: absolute;
     top: 10px;
     right: 10px;
-    background-color: #f44336; /* Red color */
+    background-color: #f44336;
     color: white;
     border: none;
     border-radius: 50%;
     font-size: 1.5rem;
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
     display: inline-flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
 }
 
-/* Hover effect for the exit button */
 .exit-button:hover {
     background-color: #d32f2f;
 }
 
+/* Styling for each recipe */
+.recipe {
+    margin-bottom: 20px;
+}

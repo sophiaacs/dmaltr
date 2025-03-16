@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,23 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Storage</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Gaegu:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body class="storage-page">
 
-    <!-- Clickable Button to Fetch Recipes -->
-    <img src="button.png" class="recipe-button" id="show-recipes" alt="Show Recipes">
+    <!-- Multiple buttons with different categories -->
+    <img src="button.png" class="button" id="kimchi-button" alt="Kimchi Button">
+    <img src="button.png" class="button" id="bibimbap-button" alt="Bibimbap Button">
+    <img src="button.png" class="button" id="bbq-button" alt="BBQ Button">
 
-    <!-- Recipe List Container -->
-    <div id="recipe-container"></div>
+    <!-- Recipe List Container (Initially hidden) -->
+    <div id="recipe-container" style="display: none;"></div>
 
     <script src="storage.js"></script>
 </body>
 </html>
-
-
-<!-- Recipe List Container -->
-<div id="recipe-container" style="display: none;">
-  <!-- Recipe content will go here -->
-</div>
-
-
