@@ -94,4 +94,51 @@ body, html {
     border-radius: 5px;
 }
 
+/* Styling for the recipe container */
+#recipe-container {
+    width: 80%; /* Width of the container (you can adjust this) */
+    max-width: 800px; /* Maximum width */
+    max-height: 70vh; /* Maximum height (70% of the viewport height) */
+    overflow-y: auto; /* Allow scrolling if the content exceeds the container height */
+    margin: 20px auto; /* Center the container horizontally and add margin */
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Optional: background color for better contrast */
+    border-radius: 10px; /* Optional: rounded corners */
+}
+
+/* Styling for individual recipe items */
+.recipe {
+    margin-bottom: 20px;
+    padding: 10px;
+    border-bottom: 1px solid #ccc; /* Add a line to separate each recipe */
+}
+
+.recipe img {
+    width: 100%; /* Ensure images fit within the container */
+    max-width: 200px; /* Max size of images */
+    height: auto;
+}
+
+/* Styling for the exit button */
+.exit-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #f44336; /* Red color */
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    width: 20px;
+    height: 20px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+/* Hover effect for the exit button */
+.exit-button:hover {
+    background-color: #d32f2f;
+}
 
