@@ -22,15 +22,3 @@ recipes_db = [
 @app.get("/recipes", response_model=List[Recipe])
 def get_recipes():
     return recipes_db
-
-@app.get("/recipes/{recipe_id}", response_model=Recipe)
-def get_recipe(recipe_id: int):
-    for recipe in recipes_db:
-        if recipe.id == recipe_id:
-            return recipe
-    return {"error": "Recipe not found"}
-
-@app.post("/recipes", response_model=Recipe)
-def add_recipe(recipe: Recipe):
-    recipes_db.append(recipe)
-    return recipe
