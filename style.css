@@ -1,3 +1,64 @@
+/* General body styling */
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Homepage background styling (kitchen.jpg) */
+.kitchen-page {
+    background-image: url('kitchen.jpg');  /* Background image */
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    position: relative;
+}
+
+/* Title and subtitle styling */
+.title-container {
+    text-align: center;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #31622D;
+    font-family: 'Gaegu', cursive;
+}
+
+.title {
+    font-size: 4rem;
+    font-weight: bold;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    margin-top: -40px;
+}
+
+/* Fridge image overlay styling */
+.fridge {
+    position: absolute;
+    top: 50%;  /* Adjust the position */
+    left: 32%;  /* Adjust the position */
+    transform: translate(-50%, -50%); /* Center the image */
+    width: 350px; /* Adjust size as needed */
+    cursor: pointer;
+}
+
+
+
+/* Storage page background styling */
+.storage-page {
+    background-image: url('storage.jpg'); /* Add storage background */
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    position: relative;
+}
+
 /* Styling for the buttons */
 .button {
     position: absolute;
@@ -37,6 +98,7 @@
     display: none; /* Hidden by default */
 }
 
+/* Exit button styling */
 .exit-button {
     position: absolute;
     top: 10px;
