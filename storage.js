@@ -2,13 +2,56 @@ document.getElementById("kimchi-button").addEventListener("click", function() {
     showRecipes("kimchi");
 });
 
-document.getElementById("bibimbap-button").addEventListener("click", function() {
-    showRecipes("bibimbap");
+document.getElementById("egg-button").addEventListener("click", function() {
+    showRecipes("egg");
 });
 
-document.getElementById("bbq-button").addEventListener("click", function() {
-    showRecipes("bbq");
+document.getElementById("butter-button").addEventListener("click", function() {
+    showRecipes("butter");
 });
+
+document.getElementById("milk-button").addEventListener("click", function() {
+    showRecipes("milk");
+});
+
+document.getElementById("bulgogi-button").addEventListener("click", function() {
+    showRecipes("bulgogi");
+});
+
+document.getElementById("tofu-button").addEventListener("click", function() {
+    showRecipes("tofu");
+});
+
+document.getElementById("fruit-button").addEventListener("click", function() {
+    showRecipes("fruit");
+});
+
+document.getElementById("cream-button").addEventListener("click", function() {
+    showRecipes("cream");
+});
+
+document.getElementById("yogurt-button").addEventListener("click", function() {
+    showRecipes("yogurt");
+});
+
+document.getElementById("jajangmyeon-button").addEventListener("click", function() {
+    showRecipes("jajangmyeon");
+});
+
+document.getElementById("buldak-button").addEventListener("click", function() {
+    showRecipes("buldak");
+});
+
+document.getElementById("sesameoil-button").addEventListener("click", function() {
+    showRecipes("sesameoil");
+});
+
+document.getElementById("ramen").addEventListener("click", function() {
+    showRecipes("ramen");
+});
+
+
+
 
 async function showRecipes(query) {
     // Hide all buttons once clicked

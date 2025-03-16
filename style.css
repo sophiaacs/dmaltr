@@ -21,7 +21,7 @@ body, html {
 .title-container {
     text-align: center;
     position: absolute;
-    top: 10%;
+    top: 0%;
     left: 50%;
     transform: translateX(-50%);
     color: #31622D;
@@ -41,10 +41,10 @@ body, html {
 /* Fridge image overlay styling */
 .fridge {
     position: absolute;
-    top: 50%;  /* Adjust the position */
+    top: 51%;  /* Adjust the position */
     left: 32%;  /* Adjust the position */
     transform: translate(-50%, -50%); /* Center the image */
-    width: 350px; /* Adjust size as needed */
+    width: 335px; /* Adjust size as needed */
     cursor: pointer;
 }
 
@@ -70,19 +70,70 @@ body, html {
 }
 
 #kimchi-button {
-    top: 30%;  /* Adjust the position */
-    left: 20%;
+    top: 37%;  /* Adjust the position */
+    left: 47%;
 }
 
-#bibimbap-button {
-    top: 50%;  /* Adjust the position */
-    left: 40%;
+#egg-button {
+    top: 7%;  /* Adjust the position */
+    left: 58%;
 }
 
-#bbq-button {
-    top: 70%;  /* Adjust the position */
-    left: 60%;
+#butter-button {
+    top: 8%;  /* Adjust the position */
+    left: 64%;
 }
+
+#milk-button {
+    top: -3%;  /* Adjust the position */
+    left: 74%;
+}
+
+#bulgogi-button {
+    top: 37%;  /* Adjust the position */
+    left: 62%;
+}
+
+#tofu-button {
+    top: 37%;  /* Adjust the position */
+    left: 57%;
+}
+
+#fruit-button {
+    top: 23%;  /* Adjust the position */
+    left: 50%;
+}
+
+#cream-button {
+    top: 39%;  /* Adjust the position */
+    left: 75%;
+}
+
+#yogurt-button {
+    top: 49%;  /* Adjust the position */
+    left: 63%;
+}
+
+#jajangmyeon-button {
+    top: 56%;  /* Adjust the position */
+    left: 12%;
+}
+
+#buldak-button {
+    top: 56%;  /* Adjust the position */
+    left: 18%;
+}
+
+#sesameoil-button {
+    top: 56%;  /* Adjust the position */
+    left: 10%;
+}
+
+#ramen-button {
+    top: 56%;  /* Adjust the position */
+    left: 28%;
+}
+
 
 /* Recipe container styling */
 #recipe-container {
