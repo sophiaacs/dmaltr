@@ -46,10 +46,17 @@ document.getElementById("sesameoil-button").addEventListener("click", function()
     showRecipes("sesameoil");
 });
 
-document.getElementById("ramen").addEventListener("click", function() {
-    showRecipes("ramen");
+document.getElementById("seaweed").addEventListener("click", function() {
+    showRecipes("seaweed");
 });
 
+document.getElementById("soysauce").addEventListener("click", function() {
+    showRecipes("soysauce");
+});
+
+document.getElementById("sugar").addEventListener("click", function() {
+    showRecipes("sugar");
+});
 
 
 

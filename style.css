@@ -126,13 +126,24 @@ body, html {
 
 #sesameoil-button {
     top: 56%;  /* Adjust the position */
-    left: 10%;
+    left: 8%;
 }
 
-#ramen-button {
-    top: 56%;  /* Adjust the position */
-    left: 28%;
+#seaweed-button {
+    top: 32%;  /* Adjust the position */
+    left: 25%;
 }
+
+#soysauce-button {
+    top: 56%;  /* Adjust the position */
+    left: 5%;
+}
+
+#sugar-button {
+    top: 32%;  /* Adjust the position */
+    left: 5%;
+}
+
 
 
 /* Recipe container styling */
