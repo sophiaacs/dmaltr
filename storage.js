@@ -43,11 +43,11 @@ document.getElementById("buldak-button").addEventListener("click", function() {
 });
 
 document.getElementById("sesameoil-button").addEventListener("click", function() {
-    showRecipes("sesameoil");
+    showRecipes("sesame oil");
 });
 
 document.getElementById("soysauce-button").addEventListener("click", function() {
-    showRecipes("soysauce");
+    showRecipes("soy sauce");
 });
 
 document.getElementById("sugar-button").addEventListener("click", function() {
@@ -82,12 +82,16 @@ document.getElementById("penne-button").addEventListener("click", function() {
     showRecipes("penne");
 });
 
-document.getElementById("seaweed1").addEventListener("click", function() {
+document.getElementById("seaweed1-button").addEventListener("click", function() {
     showRecipes("seaweed");
 });
 
-document.getElementById("seaweed2").addEventListener("click", function() {
+document.getElementById("seaweed2-button").addEventListener("click", function() {
     showRecipes("seaweed");
+});
+
+document.getElementById("seaweed3-button").addEventListener("click", function() {
+    showRecipes("roasted seaweed");
 });
 
 
@@ -101,6 +105,7 @@ async function showRecipes(query) {
 
     const appId = "2325419a";  // Your Edamam App ID
     const appKey = "7309f852a19f98b9c20e113a2b19e416";  // Your Edamam App Key
+    const encodedIngredient = encodeURIComponent(ingredient); // Converts spaces to %20
     const apiUrl = `https://api.edamam.com/api/recipes/v2?type=public&q=${query}&app_id=${appId}&app_key=${appKey}`;
 
     try {
