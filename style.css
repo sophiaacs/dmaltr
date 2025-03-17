@@ -129,10 +129,6 @@ body, html {
     left: 8%;
 }
 
-#seaweed-button {
-    top: 32%;  /* Adjust the position */
-    left: 25%;
-}
 
 #soysauce-button {
     top: 56%;  /* Adjust the position */
@@ -143,6 +139,55 @@ body, html {
     top: 32%;  /* Adjust the position */
     left: 5%;
 }
+
+#spaghetti1-button {
+    top: 80%;  /* Adjust the position */
+    left: 10%;
+}
+
+#spaghetti2-button {
+    top: 80%;  /* Adjust the position */
+    left: 15%;
+}
+
+#spaghetti3-button {
+    top: 80%;  /* Adjust the position */
+    left: 20%;
+}
+
+#spaghetti4-button {
+    top: 80%;  /* Adjust the position */
+    left: 25%;
+}
+
+#marinara-button {
+    top: 76%;  /* Adjust the position */
+    left: 4%;
+}
+
+#pasta-button {
+    top: 78%;  /* Adjust the position */
+    left: 31%;
+}
+
+#penne-button {
+    top: 78%;  /* Adjust the position */
+    left: 36%;
+}
+
+#seaweed1-button {
+    top: 32%;  /* Adjust the position */
+    left: 25%;
+}
+
+#seaweed2-button {
+    top: 32%;  /* Adjust the position */
+    left: 20%;
+}
+
+
+
+
 
 
 

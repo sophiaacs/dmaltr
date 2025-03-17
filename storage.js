@@ -46,17 +46,52 @@ document.getElementById("sesameoil-button").addEventListener("click", function()
     showRecipes("sesameoil");
 });
 
-document.getElementById("seaweed").addEventListener("click", function() {
-    showRecipes("seaweed");
-});
-
-document.getElementById("soysauce").addEventListener("click", function() {
+document.getElementById("soysauce-button").addEventListener("click", function() {
     showRecipes("soysauce");
 });
 
-document.getElementById("sugar").addEventListener("click", function() {
+document.getElementById("sugar-button").addEventListener("click", function() {
     showRecipes("sugar");
 });
+
+document.getElementById("spaghetti1-button").addEventListener("click", function() {
+    showRecipes("spaghetti");
+});
+
+document.getElementById("spaghetti2-button").addEventListener("click", function() {
+    showRecipes("spaghetti");
+});
+
+document.getElementById("spaghetti3-button").addEventListener("click", function() {
+    showRecipes("spaghetti");
+});
+
+document.getElementById("spaghetti4-button").addEventListener("click", function() {
+    showRecipes("spaghetti");
+});
+
+document.getElementById("marinara-button").addEventListener("click", function() {
+    showRecipes("marinara");
+});
+
+document.getElementById("pasta-button").addEventListener("click", function() {
+    showRecipes("pasta");
+});
+
+document.getElementById("penne-button").addEventListener("click", function() {
+    showRecipes("penne");
+});
+
+document.getElementById("seaweed1").addEventListener("click", function() {
+    showRecipes("seaweed");
+});
+
+document.getElementById("seaweed2").addEventListener("click", function() {
+    showRecipes("seaweed");
+});
+
+
+
 
 
 

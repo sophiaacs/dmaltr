@@ -25,17 +25,28 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-function fetchRecipes(ingredient) {
-    console.log("Fetching recipes for:", ingredient); // Debugging API call
-    const apiUrl = `https://api.edamam.com/search?q=${ingredient}&app_id=2325419a&app_key=7309f852a19f98b9c20e113a2b19e416`;
+let requestQueue = []; // Stores button clicks
+let isRequestInProgress = false;
+
+// Function to process queued requests
+function processQueue() {
+    if (requestQueue.length === 0) {
+        isRequestInProgress = false;
+        return;
+    }
+
+
+
+    isRequestInProgress = true;
+    let ingredient = requestQueue.shift(); // Get the next ingredient
+
+    console.log("Fetching recipes for:", ingredient);
+    const apiUrl = `https://api.edamam.com/search?q=${ingredient}&app_id=2325419a&app_key=7309f852a19f98b9c20e113a2b19e416&to=50`;
 
     fetch(apiUrl)
-        .then(response => {
-            console.log("API Response Status:", response.status); // Check API status
-            return response.json();
-        })
+        .then(response => response.json())
         .then(data => {
-            console.log("API Data:", data); // Check what data is received
+            console.log("API Data:", data);
             if (!data.hits || data.hits.length === 0) {
                 displayNoRecipesFound();
             } else {
@@ -45,8 +56,47 @@ function fetchRecipes(ingredient) {
         .catch(error => {
             console.error("Error fetching recipes:", error);
             displayNoRecipesFound();
+        })
+        .finally(() => {
+            setTimeout(processQueue, 6000); // Wait 6 seconds before next request
         });
 }
+
+
+
+// Updated event listener to queue requests
+document.addEventListener("DOMContentLoaded", function () {
+    console.log("JavaScript Loaded!");
+
+    const buttons = document.querySelectorAll(".button");
+
+    buttons.forEach(button => {
+        button.addEventListener("click", function () {
+            const ingredient = this.getAttribute("data-ingredient");
+            console.log("Button clicked for:", ingredient);
+
+            if (!ingredient) {
+                console.error("No ingredient found for this button.");
+                return;
+            }
+
+            requestQueue.push(ingredient); // Add to queue
+
+            if (!isRequestInProgress) {
+                processQueue(); // Start processing if not already running
+            }
+
+            // Show recipe container & exit button
+            document.getElementById("recipe-container").style.display = "block";
+            document.getElementById("close-btn").style.display = "block";
+        });
+    });
+
+    document.getElementById("close-btn").addEventListener("click", function () {
+        document.getElementById("recipe-container").style.display = "none";
+    });
+});
+
 
 function displayRecipes(recipes) {
     let recipeContainer = document.getElementById("recipe-list");
@@ -68,4 +118,6 @@ function displayNoRecipesFound() {
     let recipeContainer = document.getElementById("recipe-list");
     recipeContainer.innerHTML = "<p>No recipes found for this ingredient.</p>";
 }
+
+
 
