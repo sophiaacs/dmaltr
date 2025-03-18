@@ -94,19 +94,14 @@ document.getElementById("seaweed3-button").addEventListener("click", function() 
     showRecipes("roasted seaweed");
 });
 
-
-
-
-
-
 async function showRecipes(query) {
     // Hide all buttons once clicked
     document.querySelectorAll('.button').forEach(button => button.style.display = "none");
 
     const appId = "2325419a";  // Your Edamam App ID
     const appKey = "7309f852a19f98b9c20e113a2b19e416";  // Your Edamam App Key
-    const encodedIngredient = encodeURIComponent(ingredient); // Converts spaces to %20
-    const apiUrl = `https://api.edamam.com/api/recipes/v2?type=public&q=${query}&app_id=${appId}&app_key=${appKey}`;
+    const encodedIngredient = encodeURIComponent(query); // Converts spaces to %20
+    const apiUrl = `https://api.edamam.com/api/recipes/v2?type=public&q=${encodedIngredient}&app_id=${appId}&app_key=${appKey}`;
 
     try {
         const response = await fetch(apiUrl);
@@ -157,4 +152,8 @@ async function showRecipes(query) {
     } catch (error) {
         console.error("Error fetching recipes:", error);
     }
+}
+
+function hideRecipes() {
+    document.getElementById('recipe-container').classList.add('hidden');
 }
