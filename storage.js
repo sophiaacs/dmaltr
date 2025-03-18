@@ -27,7 +27,7 @@ document.getElementById("fruit-button").addEventListener("click", function() {
 });
 
 document.getElementById("cream-button").addEventListener("click", function() {
-    showRecipes("cream");
+    showRecipes("heavy cream");
 });
 
 document.getElementById("yogurt-button").addEventListener("click", function() {
@@ -94,6 +94,62 @@ document.getElementById("seaweed3-button").addEventListener("click", function() 
     showRecipes("roasted seaweed");
 });
 
+document.getElementById("gochujang-button").addEventListener("click", function() {
+    showRecipes("gochujang");
+});
+
+document.getElementById("ssamjang-button").addEventListener("click", function() {
+    showRecipes("ssamjang");
+});
+document.getElementById("bananamilk-button").addEventListener("click", function() {
+    showRecipes("banana milk");
+});
+
+document.getElementById("strawberrymilk-button").addEventListener("click", function() {
+    showRecipes("strawberry milk");
+});
+
+document.getElementById("chocolatemilk-button").addEventListener("click", function() {
+    showRecipes("chocolate milk");
+});
+
+document.getElementById("buldakcheese-button").addEventListener("click", function() {
+    showRecipes("buldak cheese");
+});
+
+document.getElementById("ramen-button").addEventListener("click", function() {
+    showRecipes("ramen");
+});
+
+document.getElementById("ramenkimchi-button").addEventListener("click", function() {
+    showRecipes("kimchi ramen");
+});
+
+document.getElementById("lettuce-button").addEventListener("click", function() {
+    showRecipes("lettuce");
+});
+
+document.getElementById("carrot-button").addEventListener("click", function() {
+    showRecipes("carrot");
+});
+
+document.getElementById("bellpepper-button").addEventListener("click", function() {
+    showRecipes("bellpepper");
+});
+
+document.getElementById("onion-button").addEventListener("click", function() {
+    showRecipes("onion");
+});
+
+document.getElementById("avocado-button").addEventListener("click", function() {
+    showRecipes("avocado");
+});
+
+document.getElementById("spinach-button").addEventListener("click", function() {
+    showRecipes("spinach");
+});
+
+
 async function showRecipes(query) {
     // Hide all buttons once clicked
     document.querySelectorAll('.button').forEach(button => button.style.display = "none");
@@ -157,3 +213,43 @@ async function showRecipes(query) {
 function hideRecipes() {
     document.getElementById('recipe-container').classList.add('hidden');
 }
+
+// Function to change button size dynamically
+function changeButtonSize(buttonId, size) {
+    const button = document.getElementById(buttonId);
+    
+    // Remove all size classes
+    button.classList.remove('small', 'medium');
+    
+    // Add class based on size
+    if (size === 'small') {
+      button.classList.add('small');
+    } else if (size === 'medium') {
+      button.classList.add('medium');
+    } 
+  }
+  
+  // Example: Change size of kimchi button
+  changeButtonSize('kimchi-button', 'medium');  // Change size to small
+  changeButtonSize('gochujang-button', 'small');    // Change size to large
+  changeButtonSize('tofu-button', 'small');
+  changeButtonSize('cheese-button', 'small');
+  changeButtonSize('ssamjang-button', 'small');
+  changeButtonSize('bananamilk-button', 'small');
+  changeButtonSize('strawberrymilk-button', 'small');
+  changeButtonSize('chocolatemilk-button', 'small');
+  changeButtonSize('lettuce-button', 'medium');
+  changeButtonSize('carrot-button', 'medium');
+  changeButtonSize('bellpepper-button', 'medium');
+  changeButtonSize('onion-button', 'small');
+  changeButtonSize('avocado-button', 'medium');
+  changeButtonSize('spinach-button', 'medium');
+  
+  // Add event listeners dynamically for all buttons
+  document.querySelectorAll('.button').forEach(button => {
+      button.addEventListener("click", function() {
+          const ingredient = this.getAttribute("data-ingredient");
+          showRecipes(ingredient);
+      });
+  });
+  

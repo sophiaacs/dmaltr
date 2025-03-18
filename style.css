@@ -52,18 +52,7 @@ body, html {
     display: none;
 }
 
-#recipe-container {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 500px;
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.5);
-    z-index: 1000;
-}
+
 
 
 /* Storage page background styling */
@@ -79,135 +68,64 @@ body, html {
 .button {
     position: absolute;
     cursor: pointer;
-    width: 100px; /* Adjust the button size */
-    height: 100px;
+    width: 80px; /* Adjust the button size */
+    height: 80px;
     background-size: cover;
     background-position: center;
 }
 
-#kimchi-button {
-    top: 37%;  /* Adjust the position */
-    left: 47%;
+/* Size variations */
+.button.small {
+    width: 40px;
+    height: 40px;
 }
 
-#egg-button {
-    top: 7%;  /* Adjust the position */
-    left: 58%;
-}
-
-#butter-button {
-    top: 8%;  /* Adjust the position */
-    left: 64%;
-}
-
-#milk-button {
-    top: -3%;  /* Adjust the position */
-    left: 74%;
-}
-
-#bulgogi-button {
-    top: 37%;  /* Adjust the position */
-    left: 62%;
-}
-
-#tofu-button {
-    top: 37%;  /* Adjust the position */
-    left: 57%;
-}
-
-#fruit-button {
-    top: 23%;  /* Adjust the position */
-    left: 50%;
-}
-
-#cream-button {
-    top: 39%;  /* Adjust the position */
-    left: 75%;
-}
-
-#yogurt-button {
-    top: 49%;  /* Adjust the position */
-    left: 63%;
-}
-
-#jajangmyeon-button {
-    top: 56%;  /* Adjust the position */
-    left: 12%;
-}
-
-#buldak-button {
-    top: 56%;  /* Adjust the position */
-    left: 18%;
-}
-
-#sesameoil-button {
-    top: 56%;  /* Adjust the position */
-    left: 8%;
+.button.medium {
+    width: 60px;
+    height: 60px;
 }
 
 
-#soysauce-button {
-    top: 56%;  /* Adjust the position */
-    left: 5%;
-}
-
-#sugar-button {
-    top: 32%;  /* Adjust the position */
-    left: 5%;
-}
-
-#spaghetti1-button {
-    top: 80%;  /* Adjust the position */
-    left: 10%;
-}
-
-#spaghetti2-button {
-    top: 80%;  /* Adjust the position */
-    left: 15%;
-}
-
-#spaghetti3-button {
-    top: 80%;  /* Adjust the position */
-    left: 20%;
-}
-
-#spaghetti4-button {
-    top: 80%;  /* Adjust the position */
-    left: 25%;
-}
-
-#marinara-button {
-    top: 76%;  /* Adjust the position */
-    left: 4%;
-}
-
-#pasta-button {
-    top: 78%;  /* Adjust the position */
-    left: 31%;
-}
-
-#penne-button {
-    top: 78%;  /* Adjust the position */
-    left: 36%;
-}
-
-#seaweed1-button {
-    top: 32%;  /* Adjust the position */
-    left: 25%;
-}
-
-#seaweed2-button {
-    top: 32%;  /* Adjust the position */
-    left: 20%;
-}
-
-#seaweed3-button {
-    top: 32%;  /* Adjust the position */
-    left: 35%;
-}
-
-
-
+/* Button positions (adjust as needed) */
+#kimchi-button { top: 39%; left: 48%; }
+#egg-button { top: 7%; left: 58%; }
+#butter-button { top: 8%; left: 64%; }
+#milk-button { top: -3%; left: 74%; }
+#bulgogi-button { top: 37%; left: 63%; }
+#tofu-button { top: 42%; left: 59%; }
+#fruit-button { top: 23%; left: 50%; }
+#cream-button { top: 39%; left: 75%; }
+#yogurt-button { top: 49%; left: 64%; }
+#jajangmyeon-button { top: 56%; left: 12%; }
+#buldak-button { top: 56%; left: 18%; }
+#sesameoil-button { top: 56%; left: 8%; }
+#soysauce-button { top: 56%; left: 5%; }
+#sugar-button { top: 32%; left: 5%; }
+#spaghetti1-button { top: 80%; left: 10%; }
+#spaghetti2-button { top: 80%; left: 15%; }
+#spaghetti3-button { top: 80%; left: 20%; }
+#spaghetti4-button { top: 80%; left: 25%; }
+#marinara-button { top: 76%; left: 4%; }
+#pasta-button { top: 78%; left: 31%; }
+#penne-button { top: 78%; left: 36%; }
+#seaweed1-button { top: 32%; left: 25%; }
+#seaweed2-button { top: 32%; left: 20%; }
+#seaweed3-button { top: 32%; left: 35%; }
+#gochujang-button { top: 38%; left: 53%; }
+#cheese-button { top: 55%; left: 61%; }
+#ssamjang-button { top: 44%; left: 53%; }
+#bananamilk-button { top: 54%; left: 57%; }
+#strawberrymilk-button { top: 54%; left: 54%; }
+#chocolatemilk-button { top: 54%; left: 50%; }
+#buldakcheese-button { top: 56%; left: 24%; }
+#ramen-button { top: 56%; left: 30%; }
+#ramenkimchi-button { top: 57%; left: 36%; }
+#lettuce-button { top: 69%; left: 60%; }
+#carrot-button { top: 73%; left: 53%; }
+#bellpepper-button { top: 79%; left: 57%; }
+#onion-button { top: 78%; left: 51%; }
+#avocado-button { top: 81%; left: 48%; }
+#spinach-button { top: 79%; left: 64%; }
 
 
 
@@ -215,17 +133,22 @@ body, html {
 
 /* Recipe container styling */
 #recipe-container {
-    position: absolute;
-    top: 20%;
-    left: 10%;
-    right: 10%;
-    bottom: 10%;
-    background-color: rgba(255, 255, 255, 0.9);
-    overflow-y: scroll;
+    position: fixed; /* Ensures the recipe box is on top of other content */
+    top: 50%; /* Vertically center */
+    left: 50%; /* Horizontally center */
+    transform: translate(-50%, -50%); /* Offset by 50% of its width and height */
+    width: 400px; /* Smaller width for a more square shape */
+    height: 400px; /* Fixed height to make it more square */
+    background-color: white;
     padding: 20px;
     border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
     display: none; /* Hidden by default */
+    overflow-y: scroll; /* Allow scrolling if the content exceeds the height */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
 }
+
 
 /* Exit button styling */
 .exit-button {
