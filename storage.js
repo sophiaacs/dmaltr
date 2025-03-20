@@ -151,27 +151,43 @@ document.getElementById("spinach-button").addEventListener("click", function() {
 
 
 async function showRecipes(query) {
-    // Hide all buttons once clicked
+    const container = document.getElementById("recipe-container");
+
+    // Clear previous content immediately to prevent flashing old recipes
+    container.style.display = "block";
+
+    // Hide all ingredient buttons while loading
     document.querySelectorAll('.button').forEach(button => button.style.display = "none");
 
     const appId = "2325419a";  // Your Edamam App ID
     const appKey = "7309f852a19f98b9c20e113a2b19e416";  // Your Edamam App Key
-    const encodedIngredient = encodeURIComponent(query); // Converts spaces to %20
+    const encodedIngredient = encodeURIComponent(query);
     const apiUrl = `https://api.edamam.com/api/recipes/v2?type=public&q=${encodedIngredient}&app_id=${appId}&app_key=${appKey}`;
 
+    // Add cacheBuster to ensure fresh fetch
+    const uniqueQuery = `${apiUrl}&cacheBuster=${new Date().getTime()}`;
+
     try {
-        const response = await fetch(apiUrl);
+        const response = await fetch(uniqueQuery);  // Use the cache-busted URL
         const data = await response.json();
 
-        const container = document.getElementById("recipe-container");
-        container.innerHTML = ""; // Clear any existing content
+        // Clear the loading text
+        container.innerHTML = "";
 
-        // Create and add the exit button dynamically
+        // Create the exit button (only one)
         const exitButton = document.createElement("button");
         exitButton.id = "exit-button";
         exitButton.classList.add("exit-button");
         exitButton.innerText = "X";
         container.appendChild(exitButton);
+
+        // Attach the exit functionality (clean exit)
+        exitButton.addEventListener("click", function () {
+            container.innerHTML = "";       // Completely clear the container
+            container.style.display = "none";  // Hide the recipe container
+            // Show all ingredient buttons again
+            document.querySelectorAll('.button').forEach(button => button.style.display = "block");
+        });
 
         // If no recipes found
         if (!data.hits.length) {
@@ -196,19 +212,15 @@ async function showRecipes(query) {
             container.appendChild(recipeDiv);
         });
 
-        // Show the recipe container and the exit button
+        // Ensure recipe container is visible
         container.style.display = "block";
-
-        // Close recipe container when exit button is clicked
-        exitButton.addEventListener("click", function() {
-            container.style.display = "none";
-            document.querySelectorAll('.button').forEach(button => button.style.display = "block"); // Show the buttons again
-        });
 
     } catch (error) {
         console.error("Error fetching recipes:", error);
+        container.innerHTML = "<p>Failed to fetch recipes. Please try again.</p>";
     }
 }
+
 
 function hideRecipes() {
     document.getElementById('recipe-container').classList.add('hidden');
@@ -253,3 +265,4 @@ function changeButtonSize(buttonId, size) {
       });
   });
   
+
